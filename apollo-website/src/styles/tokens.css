@@ -1,0 +1,76 @@
+/* Design tokens for Apollo Industries.
+   Brand colors come from the logo: navy #002b5c and gold #fcb400.
+   Gold is an accent only: primary button, active nav underline, list dashes. */
+
+:root {
+  /* Brand (fixed in both themes) */
+  --navy: #002b5c;
+  --navy-deep: #001a3a;
+  --gold: #fcb400;
+  --gold-bright: #ffc933;
+
+  /* Theme colors */
+  --bg: #ffffff;
+  --surface: #f6f8fb;
+  --text: #0d1b33;
+  --muted: #56637a;
+  --line: #e2e8f0;
+  --line-strong: #cbd5e3;
+  --field-border: #7f8fb0;
+  --link: #002b5c;
+  --error: #b3261e;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  color-scheme: light;
+
+  /* Type */
+  --font: 'Geist', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shape: small, consistent radii */
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 12px;
+
+  /* Spacing on an 8px grid */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --space-7: 6rem;
+
+  /* Layout */
+  --wrap: 64rem;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* Dark theme: follows the viewer's setting, or a data-theme override. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #0a1222;
+    --surface: #0f1a30;
+    --text: #e9eef8;
+    --muted: #9fb0cc;
+    --line: #1d2a45;
+    --line-strong: #2c3d61;
+    --field-border: #6f84ad;
+    --link: #9dbaf2;
+    --error: #ff8a80;
+    --header-bg: rgba(10, 18, 34, 0.88);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #0a1222;
+  --surface: #0f1a30;
+  --text: #e9eef8;
+  --muted: #9fb0cc;
+  --line: #1d2a45;
+  --line-strong: #2c3d61;
+  --field-border: #6f84ad;
+  --link: #9dbaf2;
+  --error: #ff8a80;
+  --header-bg: rgba(10, 18, 34, 0.88);
+  color-scheme: dark;
+}
